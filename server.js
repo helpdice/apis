@@ -9,8 +9,7 @@ require('./config/mongoose');
 const app = express();
 // const PORT = env.port;
 app.use(cors({
-    origin: true
-    // origin: ['127.0.0.1', '103.191.208.225']
+    origin: ['https://ui.helpdice.com', 'http://localhost:3000'], // frontend URLs
 }));
 
 // Setup the location server to be used with socket.io

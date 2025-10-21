@@ -1,0 +1,10 @@
+node_modules/
+
+# ignoring logs
+/production_logs
+
+# ignoring uploads folder
+/uploads
+
+#.env
+.env

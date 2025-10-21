@@ -8,7 +8,9 @@ const env = require('./config/environment');
 require('./config/mongoose');
 const app = express();
 // const PORT = env.port;
-app.use(cors());
+app.use(cors({
+    origin: ['127.0.0.1', '103.191.208.225']
+}));
 
 // Setup the location server to be used with socket.io
 // const server = http.createServer(app);

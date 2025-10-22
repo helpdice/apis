@@ -13,7 +13,7 @@ module.exports.getAllCities = async (req, res) => {
         Object.entries(filter).forEach(([key, value]) => {
           if (value) {
             if (key === 'state') {
-              queryObj.state_id = value;
+              queryObj.state_name = value;
             } else if (key === 'search') {
               queryObj.name = {
                 $regex: new RegExp(search, 'i'),

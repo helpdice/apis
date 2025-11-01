@@ -9,7 +9,7 @@ require('./config/mongoose');
 const app = express();
 // const PORT = env.port;
 app.use(cors({
-    origin: ['https://ui.helpdice.com', 'http://localhost:3000'], // frontend URLs
+    origin: ['https://ui.helpdice.com', 'http://localhost:3000', 'http://localhost:3001', 'http://localhost:5173', 'http://localhost:5174'], // frontend URLs
     credentials: true
 }));
 

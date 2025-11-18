@@ -2,7 +2,8 @@ require('dotenv').config();
 const express = require('express');
 // const logger = require('morgan');
 const cors = require('cors');
-const http = require('http');
+// const http = require('http');
+const path = require('path'); 
 const serverless = require('serverless-http');
 // const env = require('./config/environment');
 require('./config/mongoose');
@@ -19,7 +20,7 @@ app.use(cors({
 //   },
 // });
 
-app.use('/flags', express.static('flags'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(express.json({ limit: '50mb' }));
 app.use(express.urlencoded({ limit: '50mb', extended: true }));
